@@ -12,7 +12,7 @@
   networking.hostName = "nixos-btw";
   networking.networkmanager.enable = true;
 
-  time.timeZone = "India/Kolkata";
+  time.timeZone = "Asia/Kolkata";
 
   i18n.defaultLocale = "en_IN";
 
