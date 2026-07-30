@@ -1,1 +1,3 @@
-/config/mpv
+config/mpv/cache/
+config/mpv/script-opts/memo-history.log
+config/mpv/scripts/uosc/bin/
