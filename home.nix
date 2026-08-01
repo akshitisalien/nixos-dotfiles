@@ -51,7 +51,7 @@ in
     localsend
     qbittorrent
     papirus-icon-theme
-    mpv
+    haruna
     fzf
     librewolf
   ];
