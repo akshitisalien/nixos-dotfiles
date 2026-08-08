@@ -13,10 +13,6 @@
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
-<<<<<<< HEAD
-  fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/48A3-EB94";
-=======
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/268a0963-7bd2-471c-8542-126cd85fb669";
       fsType = "ext4";
@@ -24,23 +20,12 @@
 
   fileSystems."/boot" =
     { device = "/dev/disk/by-uuid/57CC-E5E4";
->>>>>>> 7c4d26b (cleaning up)
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
     };
 
-<<<<<<< HEAD
-  fileSystems."/" =
-    { device = "/dev/disk/by-uuid/a1a198b7-6b53-4af0-b9da-56c23c9e69d8";
-      fsType = "ext4";
-    };
-
-  swapDevices =
-    [ { device = "/dev/disk/by-uuid/1cc5cebc-40cf-4d98-88c7-31f3cbaf3c81"; }
-=======
   swapDevices =
     [ { device = "/dev/disk/by-uuid/2f15eeac-326c-4aef-a341-6b32e1220a09"; }
->>>>>>> 7c4d26b (cleaning up)
     ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
