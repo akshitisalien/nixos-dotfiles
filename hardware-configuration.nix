@@ -5,7 +5,8 @@
 
 {
   imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix")
+    [
+      (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usb_storage" "sd_mod" ];
@@ -14,19 +15,20 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/268a0963-7bd2-471c-8542-126cd85fb669";
+    {
+      device = "/dev/disk/by-uuid/268a0963-7bd2-471c-8542-126cd85fb669";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/57CC-E5E4";
+    {
+      device = "/dev/disk/by-uuid/57CC-E5E4";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/2f15eeac-326c-4aef-a341-6b32e1220a09"; }
-    ];
+    [{ device = "/dev/disk/by-uuid/2f15eeac-326c-4aef-a341-6b32e1220a09"; }];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;

@@ -39,7 +39,7 @@ in
       recursive = true;
     })
     configs;
-  
+
   home.packages = with pkgs; [
     neovim
     ripgrep

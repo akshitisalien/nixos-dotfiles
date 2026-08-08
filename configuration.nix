@@ -2,7 +2,7 @@
 
 {
   imports =
-    [ 
+    [
       ./hardware-configuration.nix
     ];
 
@@ -37,10 +37,10 @@
   };
 
   environment.systemPackages = with pkgs; [
-    vim 
+    vim
     wget
     git
-   ];
+  ];
 
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
