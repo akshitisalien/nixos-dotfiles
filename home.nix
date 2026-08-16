@@ -52,7 +52,6 @@ in
     papirus-icon-theme
     haruna
     fzf
-    librewolf
   ];
 
 }

@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 {
   imports =
@@ -40,6 +40,7 @@
     vim
     wget
     git
+    inputs.zen-browser.packages.${pkgs.system}.default
   ];
 
   fonts.packages = with pkgs; [
